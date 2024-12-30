@@ -8,9 +8,9 @@ def setup_logger():
     Функция должна использовать стандартную библиотеку logging. Файл логов должен создаваться каждый день с именем
      в формате "YYYY-MM-DD.log"."""
 
-    logfile_name = datetime.now().strftime('%Y-%m-%d')
+    logfile_name = datetime.now().strftime("%Y-%m-%d")
 
-    logger = getLogger('prosto_logger')
+    logger = getLogger("prosto_logger")
     logger.setLevel(DEBUG)
 
     if not logger.handlers:
@@ -34,11 +34,11 @@ def setup_logger():
 
 def log_messages(level, message):
     logger = setup_logger()
-    if level == 'info':
+    if level == "info":
         logger.info(message)
-    elif level == 'warning':
+    elif level == "warning":
         logger.warning(message)
-    elif level == 'error':
+    elif level == "error":
         logger.error(message)
     else:
         logger.debug(message)
