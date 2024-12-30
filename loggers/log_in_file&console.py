@@ -4,6 +4,10 @@ from logging import getLogger, DEBUG, Formatter
 
 
 def setup_logger():
+    """Функция, которая будет логировать информационные сообщения, предупреждения и ошибки в файле логов и консоли.
+    Функция должна использовать стандартную библиотеку logging. Файл логов должен создаваться каждый день с именем
+     в формате "YYYY-MM-DD.log"."""
+
     logfile_name = datetime.now().strftime('%Y-%m-%d')
 
     logger = getLogger('prosto_logger')
